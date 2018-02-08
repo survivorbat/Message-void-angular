@@ -1,0 +1,16 @@
+<div class="table-responsive">
+  <div class="text-center">
+    <button class="btn-dark btn" (click)="addNew()">New</button>
+    <button class="btn-dark btn" (click)="getMessages()">Reload</button>
+  </div>
+  <table class="table table-borderless text-center">
+    <tr>
+      <th class="text-center">Message</th>
+      <th class="text-center">Date</th>
+    </tr>
+    <tr *ngFor="let message of messages">
+      <td>{{message.Text}}</td>
+      <td class="text-nowrap">{{message.CreationDate}}</td>
+    </tr>
+  </table>
+</div>

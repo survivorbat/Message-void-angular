@@ -1,0 +1,4 @@
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}

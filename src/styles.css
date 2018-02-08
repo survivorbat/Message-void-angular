@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: #000c38;
+    background: -moz-linear-gradient(-45deg, #000c38 0%, #000000 41%, #01193f 99%);
+    background: -webkit-linear-gradient(-45deg, #000c38 0%,#000000 41%,#01193f 99%);
+    background: linear-gradient(135deg, #000c38 0%,#000000 41%,#01193f 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000c38', endColorstr='#01193f',GradientType=1 );
+    overflow-x:hidden;
+    color: whitesmoke;
+    font-family: 'Closeness';
+    font-weight: bolder;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: "Closeness";
+    src: url('Closeness.ttf') format("truetype");
+}
+
+.btn-dark, .btn-dark a:link, .btn-dark a:visited {
+    color:whitesmoke;
+    background-color: rgba(0,0,0,0);
+    border-color:whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-dark:hover {
+    background-color: rgba(255,255,255,0.4);
+}

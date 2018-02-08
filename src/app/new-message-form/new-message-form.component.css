@@ -1,0 +1,26 @@
+.formbox {
+    border-radius: 15px;
+    border-color: gainsboro;
+    border-width: 2px;
+    padding:4em;
+    border-style:solid;
+}
+
+.input-newmessage {
+    background-color: rgba(0,0,0,0);
+    width:100%;
+    padding:5px;
+    border-color: gainsboro;
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 5px;
+    color:white;
+    font-weight: bold;
+}
+
+.input-newmessage-label {
+    font-size:1.7em;
+}
+.input-newmessage:hover, .input-newmessage:focus {
+    outline-color: white;
+}
