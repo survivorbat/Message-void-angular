@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-  private messages : Message[];
+  messages : Message[];
   constructor(private MessageService : MessageService, private router : Router) { }
 
   ngOnInit() {

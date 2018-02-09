@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-message-form.component.css']
 })
 export class NewMessageFormComponent implements OnInit {
-  private message:string;
-  private errorinput:string;
+  message:string;
+  errorinput:string;
   constructor(private MessageService: MessageService, private router: Router) { 
     this.message="";
   }
