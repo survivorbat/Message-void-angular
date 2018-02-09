@@ -5,11 +5,11 @@ use Slim\Http\Response;
 
 // Routes
 
-include_once("config.php");
+include_once("./config.php");
 
 $app->get("/messages",  function ($request, $response, $args) {
     $db = new PDO(DB_HOST, DB_USER, DB_PASS);
-    $query = $db->prepare("SELECT * FROM Messages ORDER BY CreationDate DESC");
+    $query = $db->prepare("SELECT * FROM messages ORDER BY CreationDate DESC");
     if(!$query->execute()){
         return $response->withStatus(500)
             ->withHeader("Content-Type", "application/json")
@@ -24,7 +24,7 @@ $app->post('/messages', function (Request $request, Response $response, array $a
     $body = $request->getParsedBody() ?: [];
     if(!isset($body['text'])) return $response->withStatus(400)->withHeader("Content-Type", "application/json")->write(json_encode(array("message" => "Wrong parameters, use only text"), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
     $db = new PDO(DB_HOST, DB_USER, DB_PASS);
-    $query = $db->prepare("INSERT INTO Messages (Text) VALUES (:text)");
+    $query = $db->prepare("INSERT INTO messages (Text) VALUES (:text)");
     $query->bindParam(":text",$body['text']);
     if(!$query->execute()){
         return $response->withStatus(500)
