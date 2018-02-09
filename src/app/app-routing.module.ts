@@ -6,7 +6,7 @@ import { MessagesComponent } from './messages/messages.component';
 const routes: Routes = [
   { path: 'new', component: NewMessageFormComponent },
   { path: 'messages', component: MessagesComponent },
-  { path: '', redirectTo: '/new', pathMatch: 'full' },
+  { path: '', redirectTo: 'new', pathMatch: 'full' },
 
 ];
 

@@ -10,7 +10,7 @@
     </tr>
     <tr *ngFor="let message of messages">
       <td>{{message.Text}}</td>
-      <td class="text-nowrap">{{message.CreationDate}}</td>
+      <td>{{message.CreationDate.substring(0,10)}}</td>
     </tr>
   </table>
 </div>

@@ -19,6 +19,6 @@ export class MessagesComponent implements OnInit {
     this.MessageService.getAllMessages().subscribe((messages: Message[]) => this.messages=messages);
   }
   addNew(){
-    this.router.navigate(["/"]);
+    this.router.navigate([""]);
   }
 }

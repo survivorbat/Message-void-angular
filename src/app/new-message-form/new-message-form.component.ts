@@ -24,7 +24,7 @@ export class NewMessageFormComponent implements OnInit {
     }
     this.MessageService.postMessage(this.message)
       .subscribe(result => {
-        this.router.navigate(["/messages"]);
+        this.router.navigate(["messages"]);
       });
   }
 }
